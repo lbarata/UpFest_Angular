@@ -1,9 +1,19 @@
-<div>
+<div class="container">
 
-<img src="assets/logo.svg" alt="logo">
+  <img src="assets/logo.svg" alt="logo">
 
-  <input class="userName" placeholder="Username">
-  <input class="userEmail" placeholder="Email">
+  <div class="login">
+    <h4>Nome</h4>
+    <input class="userName" placeholder="Introduz o teu nome">
+    <h4>E-mail</h4>
+    <input class="userEmail" placeholder="Introduz o teu email">
+  </div>
+
+
+  <button class="entrar" (click)="redirectInicio()" >
+    <h4>Entrar</h4>
+  </button>
+
 
 
 </div>

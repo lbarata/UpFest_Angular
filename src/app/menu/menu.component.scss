@@ -1,0 +1,21 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(16, 16, 16);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  > a {
+    padding: 10px;
+    color: gray;
+
+    &.active {
+      color: rgba(192, 117, 64, 0.72);
+    }
+  }
+}
+
+
