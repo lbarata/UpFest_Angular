@@ -14,7 +14,7 @@ interface Paginacao {
 
 }
 
-interface ApiResponse {
+interface eventoResponse {
   eventos : Evento[],
   paginacao : Paginacao,
   success : boolean,
