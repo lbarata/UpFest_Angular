@@ -10,13 +10,27 @@ export class UserService {
 
   constructor(private router: Router) { }
 
+
+  saveLocalStorage() {
+    localStorage.setItem('dadosUser', JSON.stringify(this.dadosUser));
+  }
+
+  loadLocalStorage() {
+    const saveData = localStorage.getItem('dadosUser')
+    if (saveData) {
+      this.dadosUser = JSON.parse(saveData);
+    }
+  }
+
   saveNome(nome : string) {
     this.dadosUser.push(nome);
+    this.saveLocalStorage();
     console.log(this.dadosUser)
   }
 
   saveEmail(email: string) {
     this.dadosUser.push(email);
+    this.saveLocalStorage();
     console.log(this.dadosUser)
   }
 
