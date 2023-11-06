@@ -8,7 +8,7 @@ export class UserService {
 
   dadosUser: string[] = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
 
   saveLocalStorage() {
@@ -37,27 +37,26 @@ export class UserService {
 
   loginUser(nome : string, email: string) {
 
-    // Verificar se o existem dados para ser feeito o login
+    // Verificar se o existem dados para ser feito o login
     if (!!nome && !!email) {
 
-      // V erificar se o email tem um formato certo
+      // Verificar se o email tem um formato certo
       const emailFormat = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
       if (emailFormat.test(email)) {
         this.saveNome(nome);
         this.saveEmail(email);
         this.router.navigate(['/inicio']);
-      } else {
-        console.log("email errado")
-        throw {login: false, email: true};
 
+      } else {
+        throw {login: false, email: true};
       }
 
-    }else {
-      console.log("preciso de dados!!!")
+    } else {
       throw {login: true, email: false};
     }
 
   }
+
 
 }

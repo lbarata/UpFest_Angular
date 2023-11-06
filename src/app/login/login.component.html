@@ -4,15 +4,18 @@
 
   <div class="login">
     <h4>Nome</h4>
+
     <input class="userName" placeholder="Introduz o teu nome"
-           [(ngModel)]="inNome"/>
+           [(ngModel)]="inNome" [ngClass]="{'borderError' : dadosLoginIncorretos, 'noBorder' : !dadosLoginIncorretos}" />
+
     <h4>E-mail</h4>
     <input class="userEmail" placeholder="Introduz o teu email"
-           [(ngModel)]="inEmail"/>
+           [(ngModel)]="inEmail" [ngClass]="{'borderError' : dadosEmailIncorretos || dadosLoginIncorretos,
+           'noBorder' : !dadosLoginIncorretos ||  !dadosEmailIncorretos}"
+    />
   </div>
 
-
-  <button class="entrar" (click)="login(inNome, inEmail)"  >
+  <button class="entrar" (click)="login(inNome, inEmail)" >
     <h4>Entrar</h4>
   </button>
 
@@ -24,7 +27,7 @@
 
 
     <div *ngIf="dadosLoginIncorretos">
-      <h4>Dados de login insuficientes!!</h4>
+      <h4>Verifica o preenchimento dos campos!</h4>
     </div>
 
   </div>

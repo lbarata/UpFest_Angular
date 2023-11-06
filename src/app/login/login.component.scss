@@ -7,9 +7,10 @@
 
   > img {
     width: 30%;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 }
+
 
 .login {
   display: flex;
@@ -20,9 +21,16 @@
     margin: 8px 0 25px 0;
     background-color: gray;
     border-radius: 15px;
-    border: gray;
     padding: 10px;
   }
+}
+
+.noBorder {
+  border: gray;
+}
+
+.borderError {
+  border: 1px solid red;
 }
 
 
@@ -32,11 +40,16 @@
   background-color: darkorange;
   border-radius: 15px;
   border: 1px solid darkorange;
+
 }
 
 .entrar:hover {
+
+  cursor: pointer;
   scale: 105%;
+
 }
+
 
 .avisos {
   margin: 15px 0 15px 0;
