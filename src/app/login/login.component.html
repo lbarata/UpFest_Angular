@@ -4,15 +4,30 @@
 
   <div class="login">
     <h4>Nome</h4>
-    <input class="userName" placeholder="Introduz o teu nome">
+    <input class="userName" placeholder="Introduz o teu nome"
+           [(ngModel)]="inNome"/>
     <h4>E-mail</h4>
-    <input class="userEmail" placeholder="Introduz o teu email">
+    <input class="userEmail" placeholder="Introduz o teu email"
+           [(ngModel)]="inEmail"/>
   </div>
 
 
-  <button class="entrar" (click)="redirectInicio()" >
+  <button class="entrar" (click)="login(inNome, inEmail)"  >
     <h4>Entrar</h4>
   </button>
+
+  <div class="avisos">
+
+    <div *ngIf="dadosEmailIncorretos" >
+      <h4>Email incorreto, preencha com um email válido!</h4>
+    </div>
+
+
+    <div *ngIf="dadosLoginIncorretos">
+      <h4>Dados de login insuficientes!!</h4>
+    </div>
+
+  </div>
 
 
 
