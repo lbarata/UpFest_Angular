@@ -1,4 +1,5 @@
 .container {
-  height: 200px;
-  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
