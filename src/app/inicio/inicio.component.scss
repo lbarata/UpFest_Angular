@@ -1,5 +1,70 @@
-.container {
+.informacoes {
+  padding: 15px 0 0 20px;
   display: flex;
   flex-direction: column;
+  width: 80%;
   height: 100%;
+}
+
+.thumbSugestao {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 5px 0 15px 0;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-bottom: 20px;
+  padding-top: 100px;
+}
+
+.thumbSugestao:hover{
+  scale: 100.5%;
+  transition-duration: 300.1ms;
+  transition-timing-function: cubic-bezier(1,2,3,5);
+}
+
+.precoFavorito {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  padding: 15px 20px 0 20px;
+}
+
+
+.favorito {
+  display: flex;
+  justify-content: center;
+  background-color: #181818;
+  border-radius: 25px;
+  padding: 10px;
+  align-items: center;
+}
+
+.favorito:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #212121, #323232);
+  transition-duration: 800.1ms;
+  transition-timing-function: cubic-bezier(1, 2, 3, 5);
+}
+
+
+.precoFavorito {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  padding: 15px 20px 0 20px;
+}
+
+.preco > *{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 7px 10px 7px 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
 }

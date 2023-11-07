@@ -5,6 +5,7 @@ import {InicioComponent} from "./inicio/inicio.component";
 import {PesquisaComponent} from "./pesquisa/pesquisa.component";
 import {BilhetesComponent} from "./bilhetes/bilhetes.component";
 import {PessoalComponent} from "./pessoal/pessoal.component";
+import {EventoDetalheComponent} from "./evento-detalhe/evento-detalhe.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
   {path: 'pesquisa', component: PesquisaComponent},
   {path: 'bilhetes', component: BilhetesComponent},
-  {path: 'pessoal', component: PessoalComponent}
+  {path: 'pessoal', component: PessoalComponent},
+  {path: 'evento/:id', component : EventoDetalheComponent}
 
 ];
 

@@ -5,9 +5,34 @@
 
   <h3>Sugestões</h3>
 
+  <div *ngFor="let evento of eventos">
+
+    <div class="thumbSugestao" id="somnii24"
+
+         style="{{getImagemUrl(evento.imagem)}}">
+
+      <div class="informacoes">
+        <a [routerLink]="'/evento/' + evento.id" class="tituloPrincipal"> <h2>{{evento.designacao}}</h2> </a>
+        <a [routerLink]="'/evento/' + evento.id" class="tituloLaranja"><h4>{{evento.data}}</h4></a>
+        <a [routerLink]="'/evento/' + evento.id" class="tituloBranco"> <h4>{{evento.local}}</h4> </a>
+      </div>
 
 
-  <div>
+      <div class="precoFavorito">
+        <a [routerLink]="'/evento/' + evento.id">
+          <div class="preco">
+            <h5> 55,00€</h5>
+          </div>
+        </a>
+
+
+        <div class="favorito" data-id="somnii24" onclick="adicionarRemover('somnii24')">
+          <img src="assets/icons/heart_open.svg" alt="heart_open">
+        </div>
+      </div>
+    </div>
+
+
 
   </div>
 

@@ -4,3 +4,5 @@ interface Artista {
   estilo : string,
   imagem : string,
 }
+
+

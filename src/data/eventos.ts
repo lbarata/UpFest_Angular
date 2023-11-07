@@ -1,6 +1,6 @@
 interface Evento {
   id : number,
-  designcao : string,
+  designacao : string,
   imagem : string,
   data : string,
   local : string,
@@ -19,3 +19,7 @@ interface eventoResponse {
   paginacao : Paginacao,
   success : boolean,
 }
+
+
+export {eventoResponse};
+export {Evento};

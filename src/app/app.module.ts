@@ -13,6 +13,8 @@ import { PessoalComponent } from './pessoal/pessoal.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {NgOptimizedImage} from "@angular/common";
+import { ArtistaComponent } from './artista/artista.component';
+import { EventoDetalheComponent } from './evento-detalhe/evento-detalhe.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import {NgOptimizedImage} from "@angular/common";
     PesquisaComponent,
     BilhetesComponent,
     PessoalComponent,
+    ArtistaComponent,
+    EventoDetalheComponent,
   ],
   imports: [
     BrowserModule,
