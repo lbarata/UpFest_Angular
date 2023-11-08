@@ -1,10 +1,10 @@
 <div class="barraArtista" id="timmy">
-    <a href="artista.html">
+    <a [routerLink]="'/artista/' + id">
         <div class="imagemArtistaBarra" style="{{imagem}}"></div>
     </a>
     <div class="informacoesArtista">
-        <a href="artista.html" class="tituloPrincipal"> <h2>{{nome}}</h2></a>
-        <a href="artista.html" class="tituloLaranja"><h4>Artista</h4></a>
+        <a [routerLink]="'/artista/' + id" class="tituloPrincipal"> <h2>{{nome}}</h2></a>
+        <a [routerLink]="'/artista/' + id" class="tituloLaranja"><h4>Artista</h4></a>
     </div>
     <div class="favorito" data-id="timmy" onclick="adicionarRemover('timmy')">
         <img src="assets/icons/heart_open.svg" alt="heart_open">

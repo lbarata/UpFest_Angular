@@ -11,6 +11,7 @@
 .barraArtista:hover{
   box-shadow: 0 2px 0 rgba(38, 38, 38, 0.4);
   scale: 100.5%;
+  background: linear-gradient(to right, #181818,  #FF9900);;
   transition-duration: 100.1ms;
   transition-timing-function: cubic-bezier(1,2,3,5);
 }
@@ -18,8 +19,8 @@
 .imagemArtistaBarra{
   background-size: cover;
   background-position: center;
-  width: 90px;
-  height: 90px;
+  width: 105px;
+  height: 105px;
   border-radius: 50px;
 }
 

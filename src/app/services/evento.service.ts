@@ -2,8 +2,9 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {eventoResponse} from "../../data/eventos";
 import {environment} from "../../environments/environment";
-import {detalheResponse} from "../../data/detalhesEventos";
+import {detalheEventoResponse} from "../../data/detalhesEventos";
 import {artistaResponse} from "../../data/artistas";
+import {detalheArtistaResponse} from "../../data/detalhesArtistas";
 
 
 const apiURL = environment.BASE_URL;
@@ -43,7 +44,7 @@ export class EventoService {
       'Authorization' : `Bearer ${authTOKEN}`});
 
 
-    return this.http.get<detalheResponse>(apiURL + "evento/" + idEevento + "/detalhes" , {headers});
+    return this.http.get<detalheEventoResponse>(apiURL + "evento/" + idEevento + "/detalhes" , {headers});
 
   }
 
@@ -55,6 +56,33 @@ export class EventoService {
     return this.http.get<artistaResponse>(apiURL + `artistas/listar?pagina=${pagina}`, {headers});
 
   }
+
+  getArtistaDetalhes(idArtista : number) {
+
+    const headers = new HttpHeaders({
+      'Authorization' : `Bearer ${authTOKEN}`});
+
+    return this.http.get<detalheArtistaResponse>(apiURL + "artistas/" + idArtista + "/detalhes" , {headers});
+  }
+
+  getPesquisaArtistas(input : string) {
+
+    const headers = new HttpHeaders({
+      'Authorization' : `Bearer ${authTOKEN}`});
+
+    return this.http.get<artistaResponse>(apiURL + `artistas/listar?pesquisa=${input}`, {headers});
+
+  }
+
+  getPesquisaEventos(input : string) {
+
+    const headers = new HttpHeaders({
+      'Authorization' : `Bearer ${authTOKEN}`});
+
+    return this.http.get<eventoResponse>(apiURL + `evento/listar?pesquisa=${input}`, {headers});
+
+  }
+
 
 
 }

@@ -7,12 +7,12 @@ interface DetalheEvento {
     descricao : string
 }
 
-interface detalheResponse {
+interface detalheEventoResponse {
     evento : DetalheEvento,
-    sucess : boolean
+    success : boolean
 
 }
 
 
 export {DetalheEvento};
-export {detalheResponse};
+export {detalheEventoResponse};

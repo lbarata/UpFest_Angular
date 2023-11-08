@@ -2,7 +2,8 @@
 
     <div class="barraPesquisa">
         <img src="/assets/icons/nav_search.svg" alt="nav_search"/>
-        <input type="text" id="campoPesquisa" placeholder="Encontra um festival ou artista..."/>
+        <input id="campoPesquisa" placeholder="Encontra um festival ou artista..."
+               [ngModel]="pesquisa.value" (ngModelChange)="pesquisaClick(); pesquisa.next($event)"/>
     </div>
 
     <h2 class="tituloPagina">Festivais</h2>
@@ -15,6 +16,8 @@
                 [local]="evento.local"
     ></app-evento>
 
+    <h4 class="avisoPesquisa" *ngIf="resultadosEventos">Não existem de eventos</h4>
+
 
     <h2 class="tituloPagina">Artistas</h2>
 
@@ -24,5 +27,7 @@
                  [estilo]="artista.estilo"
                  [imagem]="artista.imagem"
     ></app-artista>
+
+    <h4 class="avisoPesquisa" *ngIf="resultadosArtistas">Não existem de artistas</h4>
 
 </div>

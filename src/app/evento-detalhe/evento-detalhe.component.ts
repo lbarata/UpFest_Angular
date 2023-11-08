@@ -12,16 +12,19 @@ export class EventoDetalheComponent implements OnInit{
 
   detalhes? : DetalheEvento;
   id? : number | any;
+  imagem! : string;
 
-  constructor(public eventoService : EventoService, private route : ActivatedRoute) {
+  constructor(private eventoService : EventoService, private route : ActivatedRoute) {
     this.id = route.snapshot.params['id']
 
   }
 
 
   ngOnInit(): void {
+
     this.eventoService.getEventoDetalhes(this.id).subscribe( data => {
       this.detalhes = data.evento;
+      this.imagem = this.eventoService.getImagemURL(data.evento.imagem);
     })
   }
 

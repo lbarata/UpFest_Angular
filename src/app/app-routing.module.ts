@@ -6,6 +6,7 @@ import {PesquisaComponent} from "./pesquisa/pesquisa.component";
 import {BilhetesComponent} from "./bilhetes/bilhetes.component";
 import {PessoalComponent} from "./pessoal/pessoal.component";
 import {EventoDetalheComponent} from "./evento-detalhe/evento-detalhe.component";
+import {ArtistaDetalheComponent} from "./artista-detalhe/artista-detalhe.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'pesquisa', component: PesquisaComponent},
   {path: 'bilhetes', component: BilhetesComponent},
   {path: 'pessoal', component: PessoalComponent},
-  {path: 'evento/:id', component : EventoDetalheComponent}
+  {path: 'evento/:id', component : EventoDetalheComponent},
+  {path: 'artista/:id', component : ArtistaDetalheComponent}
 
 ];
 

@@ -27,7 +27,6 @@ export class InicioComponent implements OnInit{
     this.pagina.subscribe( novapagina => {
       this.eventoService.getEventos(novapagina).subscribe( novaLista => {
         this.eventos = novaLista.eventos;
-        console.log(this.eventos)
       })
     })
   }

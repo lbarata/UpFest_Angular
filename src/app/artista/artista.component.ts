@@ -19,6 +19,5 @@ export class ArtistaComponent implements OnInit{
 
     ngOnInit(): void {
     this.imagem = this.eventoService.getImagemURL(this.imagem);
-
     }
 }

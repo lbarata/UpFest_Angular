@@ -30,18 +30,6 @@ body::-webkit-scrollbar {
 }
 
 
-h3 {
-  color: white;
-  font-weight: 400;
-  padding: 15px 0 15px 0;
-  font-size: 20px;
-}
-
-h4{
-  color: white;
-  font-size: 12px;
-  font-weight: 300;
-}
 
 /*-------------------------------------Titulos Gerais da página-------------------------------------------------------*/
 
@@ -145,6 +133,9 @@ h4{
 
 }
 
+
+/*-------------------------------------Elementos Gerais da página-----------------------------------------------------*/
+
 .texto{
   color: white;
   font-size: 12px;
@@ -152,13 +143,10 @@ h4{
   padding-bottom: 15px;
 }
 
-
 .linha {
   color: white;
   margin: 25px 0 15px 0;
 }
-
-
 
 
 .favorito {
@@ -172,7 +160,7 @@ h4{
 
 .favorito:hover {
   cursor: pointer;
-  background: linear-gradient(to left, #212121, #323232);
+  background: linear-gradient(to left, #212121, #494949);
   transition-duration: 800.1ms;
   transition-timing-function: cubic-bezier(1, 2, 3, 5);
 }
