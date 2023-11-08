@@ -1,35 +1,32 @@
-<div>
+<div class="container">
 
-
-    <div class="container">
-
-        <div class="thumbEvento" style=" background-image:{{getImagemUrl(detalhes?.imagem)}}">
-            <div class="favoritoThumb" data-id="sonar2024" onclick="adicionarRemover('sonar2024')">
-                <img src="assets/icons/heart_open.svg" alt="heart_open">
-            </div>
+    <div class="thumbEvento" style="{{eventoService.getImagemURL(detalhes?.imagem)}}">
+        <div class="favoritoThumb" data-id="sonar2024" onclick="adicionarRemover('sonar2024')">
+            <img src="assets/icons/heart_open.svg" alt="heart_open">
         </div>
-
-        <div class="informacoesEvento">
-            <a class="tituloPrincipal"><h2>{{detalhes?.designacao}}</h2></a>
-            <a class="tituloLaranja"><h4>{{detalhes?.data}}</h4></a>
-            <a class="tituloBranco"><h4>{{detalhes?.local}}</h4></a>
-        </div>
-
-        <hr class="linha">
-
-        <h2 class="tituloPagina">Concertos</h2>
-
-        <hr class="linha">
-
-        <h2 class="tituloPagina">Informações</h2>
-
-        <h5 class="texto">{{detalhes?.descricao}}</h5>
-
-        <hr class="linha">
-
-        <h2 class="tituloPagina">Bilhetes</h2>
-
-
     </div>
 
+    <div class="informacoesEvento">
+        <a class="tituloPrincipal"><h2>{{detalhes?.designacao}}</h2></a>
+        <a class="tituloLaranja"><h4>{{detalhes?.data}}</h4></a>
+        <a class="tituloBranco"><h4>{{detalhes?.local}}</h4></a>
+    </div>
+
+    <hr class="linha">
+
+    <h2 class="tituloPagina">Concertos</h2>
+
+    <hr class="linha">
+
+    <h2 class="tituloPagina">Informações</h2>
+
+    <h5 class="texto">{{detalhes?.descricao}}</h5>
+
+    <hr class="linha">
+
+    <h2 class="tituloPagina">Bilhetes</h2>
+
+
 </div>
+
+

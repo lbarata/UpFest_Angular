@@ -13,7 +13,7 @@ export class EventoDetalheComponent implements OnInit{
   detalhes? : DetalheEvento;
   id? : number | any;
 
-  constructor(private eventoService : EventoService, private route : ActivatedRoute) {
+  constructor(public eventoService : EventoService, private route : ActivatedRoute) {
     this.id = route.snapshot.params['id']
 
   }
@@ -22,13 +22,7 @@ export class EventoDetalheComponent implements OnInit{
   ngOnInit(): void {
     this.eventoService.getEventoDetalhes(this.id).subscribe( data => {
       this.detalhes = data.evento;
-      console.log(data)
     })
-  }
-
-  getImagemUrl(urlImagem: string | any) {
-    return `url('${this.eventoService.getImagemURL(urlImagem)}')`;
-
   }
 
 

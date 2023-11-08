@@ -9,7 +9,7 @@
 
     <div class="thumbSugestao" id="somnii24"
 
-         style="{{getImagemUrl(evento.imagem)}}">
+         style="{{eventoService.getImagemUrlGradient(evento.imagem)}}">
 
       <div class="informacoes">
         <a [routerLink]="'/evento/' + evento.id" class="tituloPrincipal"> <h2>{{evento.designacao}}</h2> </a>

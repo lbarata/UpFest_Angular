@@ -1,0 +1,13 @@
+<div class="barraFestival">
+  <a [routerLink]="'/evento/' + id">
+    <div class="imagemFestivalBarra" style="{{imagem}}"></div>
+  </a>
+  <div class="informacoesEvento">
+    <a [routerLink]="'/evento/' + id" class="tituloPrincipal"><h2>{{designacao}}</h2></a>
+    <a [routerLink]="'/evento/' + id" class="tituloLaranja"><h4>{{data}}</h4></a>
+    <a [routerLink]="'/evento/' + id" class="tituloBranco"><h4>{{local}}</h4></a>
+  </div>
+  <div class="favorito" data-id="sonar2024" onclick="adicionarRemover('sonar2024')">
+    <img src="/assets/icons/heart_open.svg" alt="heart_open">
+  </div>
+</div>

@@ -14,6 +14,5 @@ interface detalheResponse {
 }
 
 
-
 export {DetalheEvento};
 export {detalheResponse};

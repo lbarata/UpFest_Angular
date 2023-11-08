@@ -15,6 +15,8 @@ import {FormsModule} from "@angular/forms";
 import {NgOptimizedImage} from "@angular/common";
 import { ArtistaComponent } from './artista/artista.component';
 import { EventoDetalheComponent } from './evento-detalhe/evento-detalhe.component';
+import { EventoComponent } from './evento/evento.component';
+import { ArtistaDetalheComponent } from './artista-detalhe/artista-detalhe.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { EventoDetalheComponent } from './evento-detalhe/evento-detalhe.componen
     PessoalComponent,
     ArtistaComponent,
     EventoDetalheComponent,
+    EventoComponent,
+    ArtistaDetalheComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {eventoResponse} from "../../data/eventos";
 import {environment} from "../../environments/environment";
 import {detalheResponse} from "../../data/detalhesEventos";
+import {artistaResponse} from "../../data/artistas";
 
 
 const apiURL = environment.BASE_URL;
@@ -15,18 +16,24 @@ export class EventoService {
 
   constructor(private http: HttpClient) {}
 
-  getEventos() {
+  getEventos(pagina : number) {
 
     const headers = new HttpHeaders({
       'Authorization' : `Bearer ${authTOKEN}`});
 
 
-    return this.http.get<eventoResponse>(apiURL + "evento/listar", {headers});
+    return this.http.get<eventoResponse>(apiURL + `evento/listar?pagina=${pagina}`, {headers});
   }
 
-  getImagemURL(urlImagem: string | any) {
+  getImagemURL(urlImagem : string | any) {
 
-    return apiURL + "public/" + urlImagem;
+    return `background-image: url('${apiURL + "public/" + urlImagem}')`;
+
+  }
+
+  getImagemUrlGradient(urlImagem : string | any) {
+    return `background-image: linear-gradient(to bottom, rgba(169,169,169,0),
+            #1f1f1f), url('${apiURL + "public/" + urlImagem}')`;
 
   }
 
@@ -37,6 +44,15 @@ export class EventoService {
 
 
     return this.http.get<detalheResponse>(apiURL + "evento/" + idEevento + "/detalhes" , {headers});
+
+  }
+
+  getArtistas(pagina : number){
+
+    const headers = new HttpHeaders({
+      'Authorization' : `Bearer ${authTOKEN}`});
+
+    return this.http.get<artistaResponse>(apiURL + `artistas/listar?pagina=${pagina}`, {headers});
 
   }
 

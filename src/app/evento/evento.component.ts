@@ -2,23 +2,23 @@ import {Component, Input, OnInit} from '@angular/core';
 import {EventoService} from "../services/evento.service";
 
 @Component({
-  selector: 'app-artista',
-  templateUrl: './artista.component.html',
-  styleUrls: ['./artista.component.scss']
+  selector: 'app-evento',
+  templateUrl: './evento.component.html',
+  styleUrls: ['./evento.component.scss']
 })
-export class ArtistaComponent implements OnInit{
+export class EventoComponent implements OnInit{
 
   @Input() id! : number;
-  @Input() nome! : string;
-  @Input() estilo! : string;
+  @Input() designacao! : string;
   @Input() imagem! : string;
-
-
+  @Input() data! : string;
+  @Input() local! : string;
+  @Input() descricao! : string;
   constructor(private eventoService : EventoService) {
   }
 
-    ngOnInit(): void {
+  ngOnInit(): void {
     this.imagem = this.eventoService.getImagemURL(this.imagem);
+  }
 
-    }
 }

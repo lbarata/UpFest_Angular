@@ -17,21 +17,19 @@ export class InicioComponent implements OnInit{
   pagina: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
   constructor(private  userService : UserService,
-              private eventoService : EventoService) {
+              public eventoService : EventoService) {
 
     this.nomeUser =  this.getNomeUser();
   }
 
 
   ngOnInit(): void {
-      this.eventoService.getEventos().subscribe( novaLista => {
+    this.pagina.subscribe( novapagina => {
+      this.eventoService.getEventos(novapagina).subscribe( novaLista => {
         this.eventos = novaLista.eventos;
         console.log(this.eventos)
       })
-
-
-
-
+    })
   }
 
   getNomeUser()  {
@@ -48,12 +46,6 @@ export class InicioComponent implements OnInit{
 
   }
 
-  getImagemUrl(urlImagem : string) {
-    return `background-image: linear-gradient(to bottom, rgba(169,169,169,0),
-            #1f1f1f), url('${this.eventoService.getImagemURL(urlImagem)}')`;
 
-  }
-
-
-
+  protected readonly indexedDB = indexedDB;
 }
