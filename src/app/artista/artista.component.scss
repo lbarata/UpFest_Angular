@@ -6,12 +6,13 @@
   padding-right: 20px;
   align-items: center;
   margin-bottom: 25px;
+
 }
 
 .barraArtista:hover{
   box-shadow: 0 2px 0 rgba(38, 38, 38, 0.4);
   scale: 100.5%;
-  background: linear-gradient(to right, #181818,  #FF9900);;
+  background: linear-gradient(to right, #000000,  #FF9900);;
   transition-duration: 100.1ms;
   transition-timing-function: cubic-bezier(1,2,3,5);
 }
@@ -29,4 +30,7 @@
   display: flex;
   flex-direction: column;
   width: 75%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

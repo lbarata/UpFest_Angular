@@ -10,7 +10,7 @@
 
 .barraFestival:hover{
   scale: 100.5%;
-  background: linear-gradient(to right, #181818, #FF9900);
+  background: linear-gradient(to right, #000000, #FF9900);
   transition-duration: 3.1ms;
   transition-timing-function: cubic-bezier(1,2,3,5);
 }
@@ -26,10 +26,13 @@
 }
 
 
-.informacoesEvento{
+.informacoesEvento {
   padding: 15px 0 15px 15px;
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 100%;
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

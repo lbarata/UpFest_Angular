@@ -17,6 +17,7 @@ import { ArtistaComponent } from './artista/artista.component';
 import { EventoDetalheComponent } from './evento-detalhe/evento-detalhe.component';
 import { EventoComponent } from './evento/evento.component';
 import { ArtistaDetalheComponent } from './artista-detalhe/artista-detalhe.component';
+import { SugestaoComponent } from './sugestao/sugestao.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ArtistaDetalheComponent } from './artista-detalhe/artista-detalhe.compo
     EventoDetalheComponent,
     EventoComponent,
     ArtistaDetalheComponent,
+    SugestaoComponent,
   ],
   imports: [
     BrowserModule,

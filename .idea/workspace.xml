@@ -4,25 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70d254e2-467d-4eea-abb0-2a0c9539ce74" name="Changes" comment="Terça - Imnprove">
+    <list default="true" id="70d254e2-467d-4eea-abb0-2a0c9539ce74" name="Changes" comment="Quarta - Imnprove">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/artista-detalhe/artista-detalhe.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/artista-detalhe/artista-detalhe.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/artista-detalhe/artista-detalhe.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/artista-detalhe/artista-detalhe.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/artista-detalhe/artista-detalhe.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/artista-detalhe/artista-detalhe.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/artista/artista.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/artista/artista.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/artista/artista.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/artista/artista.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/artista/artista.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/artista/artista.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/evento-detalhe/evento-detalhe.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/evento-detalhe/evento-detalhe.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/evento-detalhe/evento-detalhe.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/evento-detalhe/evento-detalhe.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/evento-detalhe/evento-detalhe.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/evento-detalhe/evento-detalhe.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/evento/evento.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/evento/evento.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/inicio/inicio.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/inicio/inicio.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pesquisa/pesquisa.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pesquisa/pesquisa.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pesquisa/pesquisa.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pesquisa/pesquisa.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pesquisa/pesquisa.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pesquisa/pesquisa.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/evento.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/evento.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/detalhesArtistas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/detalhesArtistas.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/detalhesEventos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/detalhesEventos.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +120,7 @@
       <workItem from="1699313427188" duration="3113000" />
       <workItem from="1699352977797" duration="8075000" />
       <workItem from="1699377888035" duration="10919000" />
-      <workItem from="1699438822487" duration="12175000" />
+      <workItem from="1699438822487" duration="18148000" />
     </task>
     <task id="LOCAL-00001" summary="Domingo - Imnprove">
       <option name="closed" value="true" />
@@ -193,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699444506371</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Terça - Imnprove">
+      <option name="closed" value="true" />
+      <created>1699455657019</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699455657019</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

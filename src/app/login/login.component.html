@@ -3,12 +3,12 @@
   <img src="assets/logo.svg" alt="logo">
 
   <div class="login">
-    <h4>Nome</h4>
+    <h4 class="tituloLogin">Nome</h4>
 
     <input class="userName" placeholder="Introduz o teu nome"
            [(ngModel)]="inNome" [ngClass]="{'borderError' : dadosLoginIncorretos, 'noBorder' : !dadosLoginIncorretos}" />
 
-    <h4>E-mail</h4>
+    <h4 class="tituloLogin">E-mail</h4>
     <input class="userEmail" placeholder="Introduz o teu email"
            [(ngModel)]="inEmail" [ngClass]="{'borderError' : dadosEmailIncorretos || dadosLoginIncorretos,
            'noBorder' : !dadosLoginIncorretos ||  !dadosEmailIncorretos}"

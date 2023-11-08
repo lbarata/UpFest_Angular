@@ -35,6 +35,7 @@
 
 
 .entrar {
+  color: white;
   margin: 50px 0 0 0;
   padding: 10px;
   background-color: darkorange;
@@ -44,7 +45,6 @@
 }
 
 .entrar:hover {
-
   cursor: pointer;
   scale: 105%;
 
@@ -53,4 +53,16 @@
 
 .avisos {
   margin: 15px 0 15px 0;
+  > div > * {
+    color: gray;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.tituloLogin {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
 }

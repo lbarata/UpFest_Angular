@@ -1,0 +1,22 @@
+<div class="thumbSugestao" style="{{imagem}}">
+
+  <div class="informacoes">
+    <a [routerLink]="'/evento/' + id" class="tituloPrincipal"> <h2>{{designacao}}</h2> </a>
+    <a [routerLink]="'/evento/' + id" class="tituloLaranja"><h4>{{data}}</h4></a>
+    <a [routerLink]="'/evento/' + id" class="tituloBranco"> <h4>{{local}}</h4> </a>
+  </div>
+
+
+  <div class="precoFavorito">
+    <a [routerLink]="'/evento/' + id">
+      <div class="preco">
+        <h5> 55,00€</h5>
+      </div>
+    </a>
+
+
+    <div class="favorito" data-id="{{id}}" onclick="adicionarRemover('somnii24')">
+      <img src="assets/icons/heart_open.svg" alt="heart_open">
+    </div>
+  </div>
+</div>

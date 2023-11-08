@@ -33,7 +33,7 @@ export class EventoService {
   }
 
   getImagemUrlGradient(urlImagem : string | any) {
-    return `background-image: linear-gradient(to bottom, rgba(169,169,169,0),
+    return `background-image: linear-gradient (to bottom, rgba(169,169,169,0),
             #1f1f1f), url('${apiURL + "public/" + urlImagem}')`;
 
   }
@@ -45,15 +45,6 @@ export class EventoService {
 
 
     return this.http.get<detalheEventoResponse>(apiURL + "evento/" + idEevento + "/detalhes" , {headers});
-
-  }
-
-  getArtistas(pagina : number){
-
-    const headers = new HttpHeaders({
-      'Authorization' : `Bearer ${authTOKEN}`});
-
-    return this.http.get<artistaResponse>(apiURL + `artistas/listar?pagina=${pagina}`, {headers});
 
   }
 

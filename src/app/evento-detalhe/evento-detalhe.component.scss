@@ -24,3 +24,19 @@
   z-index: 1;
 
 }
+
+.favoritoThumb:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #212121, #494949);
+  transition-duration: 800.1ms;
+  transition-timing-function: cubic-bezier(1, 2, 3, 5);
+}
+
+
+.informacoesEvento{
+  padding: 15px 0 15px 0;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  position: relative;
+}
