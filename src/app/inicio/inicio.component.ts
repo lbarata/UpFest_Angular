@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from "../services/user.service";
 import {EventoService} from "../services/evento.service";
-import {BehaviorSubject} from "rxjs";
 import {Evento} from "../../data/eventos";
 
 @Component({
@@ -14,7 +13,6 @@ export class InicioComponent implements OnInit{
   nomeUser : string= '';
   eventos : Evento[] = [];
 
-  pagina: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
   constructor(private  userService : UserService,
               public eventoService : EventoService) {
@@ -24,11 +22,10 @@ export class InicioComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.pagina.subscribe( novapagina => {
-      this.eventoService.getEventos(novapagina).subscribe( novaLista => {
+      this.eventoService.getEventos(0).subscribe( novaLista => {
         this.eventos = novaLista.eventos;
       })
-    })
+
   }
 
   getNomeUser()  {

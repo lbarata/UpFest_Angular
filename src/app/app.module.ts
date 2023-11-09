@@ -19,6 +19,10 @@ import { EventoComponent } from './evento/evento.component';
 import { ArtistaDetalheComponent } from './artista-detalhe/artista-detalhe.component';
 import { SugestaoComponent } from './sugestao/sugestao.component';
 import { BilheteCompraComponent } from './bilhete-compra/bilhete-compra.component';
+import { ConfirmacaoCompraComponent } from './confirmacao-compra/confirmacao-compra.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from "@angular/material/dialog";
+
 
 @NgModule({
   declarations: [
@@ -35,6 +39,7 @@ import { BilheteCompraComponent } from './bilhete-compra/bilhete-compra.componen
     ArtistaDetalheComponent,
     SugestaoComponent,
     BilheteCompraComponent,
+    ConfirmacaoCompraComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,9 @@ import { BilheteCompraComponent } from './bilhete-compra/bilhete-compra.componen
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

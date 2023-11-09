@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
 import {UserService} from "./services/user.service";
-import {EventoService} from "./services/evento.service";
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +9,7 @@ import {EventoService} from "./services/evento.service";
 export class AppComponent implements OnInit {
 
   isLogin: boolean = true;
+  title: "UpFest - App" | undefined;
 
   constructor( private router: Router,
                private userService : UserService) {
@@ -19,8 +18,6 @@ export class AppComponent implements OnInit {
 
     if (this.userService.dadosUser.length > 0) {
       this.isLogin = false;
-      this.router.navigate(['/inicio']);
-
     } else {
       this.isLogin = true;
       this.router.navigate(['/login']);
