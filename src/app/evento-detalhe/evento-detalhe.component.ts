@@ -3,6 +3,7 @@ import {EventoService} from "../services/evento.service";
 import {DetalheEvento} from "../../data/detalhesEventos";
 import {ActivatedRoute} from "@angular/router";
 import {ConcertoEvento} from "../../data/concertosEventos";
+import {BilheteCompra} from "../../data/bilheteCompra";
 
 @Component({
   selector: 'app-evento-detalhe',
@@ -15,6 +16,7 @@ export class EventoDetalheComponent implements OnInit{
   id? : number | any;
   imagem! : string;
   concertos? : ConcertoEvento[] = [];
+  serieBilhetes? : BilheteCompra[] = [];
 
   constructor(private eventoService : EventoService, private route : ActivatedRoute) {
     this.id = route.snapshot.params['id']
@@ -32,6 +34,12 @@ export class EventoDetalheComponent implements OnInit{
     this.eventoService.getConcertosEvento(this.id).subscribe(novaLista =>{
       this.concertos = novaLista.concertos;
     })
+
+    this.eventoService.getSerieBilhetes(this.id).subscribe( novaLista => {
+      this.serieBilhetes = novaLista.bilhetesCompra;
+    })
+
+
   }
 
 

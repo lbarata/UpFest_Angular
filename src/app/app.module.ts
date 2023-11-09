@@ -18,6 +18,7 @@ import { EventoDetalheComponent } from './evento-detalhe/evento-detalhe.componen
 import { EventoComponent } from './evento/evento.component';
 import { ArtistaDetalheComponent } from './artista-detalhe/artista-detalhe.component';
 import { SugestaoComponent } from './sugestao/sugestao.component';
+import { BilheteCompraComponent } from './bilhete-compra/bilhete-compra.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SugestaoComponent } from './sugestao/sugestao.component';
     EventoComponent,
     ArtistaDetalheComponent,
     SugestaoComponent,
+    BilheteCompraComponent,
   ],
   imports: [
     BrowserModule,

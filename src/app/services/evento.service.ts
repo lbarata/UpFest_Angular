@@ -7,6 +7,7 @@ import {artistaResponse} from "../../data/artistas";
 import {detalheArtistaResponse} from "../../data/detalhesArtistas";
 import {concertoArtistaResponse} from "../../data/concertosArtistas";
 import {concertoEventoResponse} from "../../data/concertosEventos";
+import {bilheteCompraResponse} from "../../data/bilheteCompra";
 
 
 const apiURL = environment.BASE_URL;
@@ -93,6 +94,14 @@ export class EventoService {
 
   }
 
+  getSerieBilhetes(eventoID : number){
 
+
+    const headers = new HttpHeaders({
+      'Authorization' : `Bearer ${authTOKEN}`});
+
+    return this.http.get<bilheteCompraResponse>(apiURL + `evento/` + eventoID + `/series_bilhetes/listar`, {headers});
+
+  }
 
 }

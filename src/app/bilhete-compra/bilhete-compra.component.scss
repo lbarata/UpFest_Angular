@@ -1,0 +1,55 @@
+
+.barraBilheteDisponivel{
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  background: linear-gradient(to right, #181818, #323232);
+  padding-right: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+  opacity: 100%;
+}
+
+.barraBilheteIndisponivel{
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  background: linear-gradient(to right, #181818, #323232);
+  padding-right: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+  opacity: 25%;
+}
+
+
+.baseImagemBilhete{
+  background-color: #323232;
+  border-radius: 50px;
+}
+
+.imagemBilhete{
+  display: flex;
+  justify-content: center;
+  background: no-repeat center;
+  background-size: 45px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+}
+
+.informacoesBilhete{
+  padding: 15px 0 15px 15px;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+
+.tituloBilhete > * {
+  text-decoration: none;
+  padding: 2px 0 2px 0;
+  color: #FF9900;
+  font-weight: 300;
+  font-size: 12px;
+
+}
