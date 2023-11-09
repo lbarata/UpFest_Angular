@@ -20,6 +20,9 @@ export class EventoService {
 
   constructor(private http: HttpClient) {}
 
+
+
+
   getEventos(pagina : number) {
 
     const headers = new HttpHeaders({
@@ -101,5 +104,6 @@ export class EventoService {
 
     return this.http.get<bilheteCompraResponse>(apiURL + `evento/` + eventoID + `/series_bilhetes/listar`, {headers});
   }
+
 
 }

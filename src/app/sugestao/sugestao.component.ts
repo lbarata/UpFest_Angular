@@ -20,14 +20,7 @@ export class SugestaoComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    console.log(this.imagem)
-
     this.imagem = this.eventoService.getImagemUrlGradient(this.imagem);
-
-    console.log(this.imagem)
-
-
-
   }
 
 }

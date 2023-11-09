@@ -1,12 +1,12 @@
-<div class="barraBilheteDisponivel" [ngClass]="{'indisponivel' : !disponivel}">
+<div class="barraBilhete" [ngClass]="{'indisponivel' : !disponivel}" (click)="disponivel && openPopup()">
   <div class="baseImagemBilhete">
     <div class="imagemBilhete" style="background-image:
                     url('assets/icons/nav_ticket_active.svg')"></div>
   </div>
 
   <div class="informacoesBilhete">
-    <a [routerLink]="'/confirmacao-compra'"  class="tituloPrincipal"><h4>{{designacao}}</h4></a>
-    <a [routerLink]="'/confirmacao-compra'" class="tituloLaranja"> <h2>{{limite_vendas}}</h2></a>
+    <a  class="tituloPrincipal"><h4>{{designacao}}</h4></a>
+    <a  class="tituloLaranja"> <h2>{{limite_vendas}}</h2></a>
   </div>
   <div class="preco">
     <h5>{{custo}},00€</h5>

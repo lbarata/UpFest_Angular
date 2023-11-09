@@ -1,5 +1,13 @@
 import { Injectable } from '@angular/core';
 import {Router} from "@angular/router";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {environment} from "../../environments/environment";
+import {RespostaCompraBilhete} from "../../data/respostaCompraBilhete";
+
+
+const apiURL = environment.BASE_URL;
+const authTOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkRhdmlkX0JhcmF0YV9kZS5sYmFyYXRhQGdtYWlsLmNvbSIsImlhdCI6MTY5ODg4Njk4MiwiZXhwIjoxNzMwNDIyOTgyfQ.SbW914f20YBKJQL_-5MV_h-brqdixAMrowZS9K0MTfE';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +16,7 @@ export class UserService {
 
   dadosUser: string[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
 
   saveLocalStorage() {
@@ -34,13 +42,12 @@ export class UserService {
     console.log(this.dadosUser)
   }
 
-
   loginUser(nome : string, email: string) {
 
-    // Verificar se o existem dados para ser feito o login
+    // Verificar se o existem dados para ser feito o "login"
     if (!!nome && !!email) {
 
-      // Verificar se o email tem um formato certo
+      // Verificar se o "e-mail" tem um formato certo
       const emailFormat = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
       if (emailFormat.test(email)) {
@@ -57,6 +64,33 @@ export class UserService {
     }
 
   }
+
+  getNome(){
+    return this.dadosUser[0];
+  }
+
+  getEmail() {
+    return this.dadosUser[1];
+  }
+
+
+  comprarBilhete(eventoID: number, serieID : number ) {
+
+    const headers = new HttpHeaders({
+      'Authorization' : `Bearer ${authTOKEN}`});
+
+
+    const body = {
+      "evento": eventoID,
+      "nome": this.getNome(),
+      "email": this.getEmail(),
+      "serie": serieID
+    };
+
+
+    return this.http.post<RespostaCompraBilhete>(apiURL + `vendas/bilhetes/comprar`, body, {headers});
+  }
+
 
 
 }

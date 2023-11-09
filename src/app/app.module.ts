@@ -22,6 +22,8 @@ import { BilheteCompraComponent } from './bilhete-compra/bilhete-compra.componen
 import { ConfirmacaoCompraComponent } from './confirmacao-compra/confirmacao-compra.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
+import { PagamentoPendenteComponent } from './pagamento-pendente/pagamento-pendente.component';
+import { PagamentoValidadoComponent } from './pagamento-validado/pagamento-validado.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     SugestaoComponent,
     BilheteCompraComponent,
     ConfirmacaoCompraComponent,
+    PagamentoPendenteComponent,
+    PagamentoValidadoComponent,
   ],
   imports: [
     BrowserModule,

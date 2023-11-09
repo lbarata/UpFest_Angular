@@ -1,6 +1,6 @@
 interface DetalheEvento {
     id : number,
-    designacao : string,
+    designacao : string | any,
     imagem : string,
     data : string,
     local : string,

@@ -42,6 +42,4 @@ export class InicioComponent implements OnInit{
 
   }
 
-
-  protected readonly indexedDB = indexedDB;
 }

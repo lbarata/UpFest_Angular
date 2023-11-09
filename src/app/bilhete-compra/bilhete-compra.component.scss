@@ -1,5 +1,5 @@
 
-.barraBilheteDisponivel{
+.barraBilhete{
   display: flex;
   justify-content: flex-start;
   border-radius: 50px;
@@ -10,11 +10,21 @@
   opacity: 100%;
 
   &.indisponivel{
+    cursor: not-allowed;
     filter: grayscale(100%);
     opacity: 25%;
-
+    pointer-events: none;
   }
+}
 
+
+.barraBilhete:hover{
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(38, 38, 38, 0.4);
+  scale: 100.5%;
+  background: linear-gradient(to right, #000000,  #FF9900);;
+  transition-duration: 100.1ms;
+  transition-timing-function: cubic-bezier(1,2,3,5);
 }
 
 

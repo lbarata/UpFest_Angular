@@ -36,7 +36,6 @@ export class EventoDetalheComponent implements OnInit{
     })
 
     this.eventoService.getSerieBilhetes(this.id).subscribe( novaLista => {
-        console.log(novaLista)
       this.serieBilhetes = novaLista.series;
     })
 

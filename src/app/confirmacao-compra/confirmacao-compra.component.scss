@@ -1,8 +1,4 @@
-
-/*---------------------------------------PopUp Compra de Bilhete------------------------------------------------------*/
-
 .popup {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,7 +14,6 @@
   flex-direction: column;
   position: fixed;
   top: 20%;
-  /*bottom: 20%;*/  // restringir caso o ecrã seja muito pequeno
   border-radius: 25px;
   padding: 10px 25px 20px 25px;
   margin: 0 35px 0 35px;
@@ -107,4 +102,11 @@
     transition-timing-function: cubic-bezier(1,2,3,5);
 
   }
+}
+
+
+.containerCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
