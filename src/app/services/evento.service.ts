@@ -96,12 +96,10 @@ export class EventoService {
 
   getSerieBilhetes(eventoID : number){
 
-
     const headers = new HttpHeaders({
       'Authorization' : `Bearer ${authTOKEN}`});
 
     return this.http.get<bilheteCompraResponse>(apiURL + `evento/` + eventoID + `/series_bilhetes/listar`, {headers});
-
   }
 
 }

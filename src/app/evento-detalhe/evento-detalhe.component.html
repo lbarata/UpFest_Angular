@@ -35,12 +35,14 @@
 
   <h2 class="tituloPagina">Bilhetes</h2>
 
+
   <app-bilhete-compra *ngFor="let bilhete of serieBilhetes"
                       [id]="bilhete.id"
                       [designacao]="bilhete.designacao"
                       [limite_vendas]="bilhete.limite_vendas"
                       [custo]="bilhete.custo"
                       [disponivel]="bilhete.disponivel"
+
   ></app-bilhete-compra>
 
 

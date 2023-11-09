@@ -8,18 +8,15 @@
   align-items: center;
   margin-bottom: 25px;
   opacity: 100%;
+
+  &.indisponivel{
+    filter: grayscale(100%);
+    opacity: 25%;
+
+  }
+
 }
 
-.barraBilheteIndisponivel{
-  display: flex;
-  justify-content: flex-start;
-  border-radius: 50px;
-  background: linear-gradient(to right, #181818, #323232);
-  padding-right: 20px;
-  align-items: center;
-  margin-bottom: 25px;
-  opacity: 25%;
-}
 
 
 .baseImagemBilhete{
@@ -53,3 +50,18 @@
   font-size: 12px;
 
 }
+
+.preco > *{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 7px 10px 7px 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+
+}
+
+

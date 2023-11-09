@@ -7,7 +7,7 @@ interface BilheteCompra {
 }
 
 interface bilheteCompraResponse {
-  bilhetesCompra : BilheteCompra[],
+  series : BilheteCompra[],
   success : boolean
 }
 export {BilheteCompra};
