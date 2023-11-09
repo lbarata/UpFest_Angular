@@ -5,6 +5,8 @@ import {environment} from "../../environments/environment";
 import {detalheEventoResponse} from "../../data/detalhesEventos";
 import {artistaResponse} from "../../data/artistas";
 import {detalheArtistaResponse} from "../../data/detalhesArtistas";
+import {concertoArtistaResponse} from "../../data/concertosArtistas";
+import {concertoEventoResponse} from "../../data/concertosEventos";
 
 
 const apiURL = environment.BASE_URL;
@@ -29,13 +31,11 @@ export class EventoService {
   getImagemURL(urlImagem : string | any) {
 
     return `background-image: url('${apiURL + "public/" + urlImagem}')`;
-
   }
 
   getImagemUrlGradient(urlImagem : string | any) {
-    return `background-image: linear-gradient (to bottom, rgba(169,169,169,0),
-            #1f1f1f), url('${apiURL + "public/" + urlImagem}')`;
 
+    return `background-image: linear-gradient(to bottom, rgba(169,169,169,0), #1f1f1f), url('${apiURL + "public/" + urlImagem}')`;
   }
 
   getEventoDetalhes(idEevento : number) {
@@ -71,6 +71,25 @@ export class EventoService {
       'Authorization' : `Bearer ${authTOKEN}`});
 
     return this.http.get<eventoResponse>(apiURL + `evento/listar?pesquisa=${input}`, {headers});
+
+  }
+
+  getConcertosArtista(artistaID : number) {
+
+    const headers = new HttpHeaders({
+      'Authorization' : `Bearer ${authTOKEN}`});
+
+    return this.http.get<concertoArtistaResponse>(apiURL + `artistas/` + artistaID + `/concertos`, {headers});
+
+  }
+
+  getConcertosEvento(eventoID : number) {
+
+    const headers = new HttpHeaders({
+      'Authorization' : `Bearer ${authTOKEN}`});
+
+    return this.http.get<concertoEventoResponse>(apiURL + `evento/` + eventoID + `/concertos/listar`, {headers});
+
 
   }
 

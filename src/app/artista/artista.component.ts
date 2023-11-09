@@ -12,6 +12,8 @@ export class ArtistaComponent implements OnInit{
   @Input() nome! : string;
   @Input() estilo! : string;
   @Input() imagem! : string;
+  @Input() palco? : string;
+  @Input() designacao? :string;
 
 
   constructor(private eventoService : EventoService) {

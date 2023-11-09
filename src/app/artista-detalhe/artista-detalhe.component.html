@@ -1,34 +1,43 @@
 <div class="container">
 
-    <div class="backgroundArtista" style="{{imagem}}">
+  <div class="backgroundArtista" style="{{imagem}}">
 
+  </div>
+
+  <div class="thumbArtista">
+
+    <a>
+      <div class="imagemArtistaThumb" style="{{imagem}}"></div>
+    </a>
+
+    <div class="informacoesArtista">
+      <a class="tituloPrincipal"><h2>{{detalhes?.nome}}</h2></a>
+      <a class="tituloLaranja"><h4>Artista</h4></a>
     </div>
 
-    <div class="thumbArtista">
 
-        <a>
-            <div class="imagemArtistaThumb" style="{{imagem}}"></div>
-        </a>
-
-        <div class="informacoesArtista">
-            <a class="tituloPrincipal"> <h2>{{detalhes?.nome}}</h2> </a>
-            <a class="tituloLaranja"><h4>Artista</h4></a>
-        </div>
-
-
-        <div class="favorito" data-id="hardwell" onclick="adicionarRemover('hardwell')">
-            <img src="assets/icons/heart_open.svg" alt="heart_open">
-        </div>
-
+    <div class="favoritoArtista" data-id="hardwell" onclick="adicionarRemover('hardwell')">
+      <img src="assets/icons/heart_open.svg" alt="heart_open">
     </div>
 
-    <h2 class="tituloPagina">Próximos concertos</h2>
+  </div>
+
+  <h2 class="tituloPagina">Próximos concertos</h2>
+
+  <app-evento *ngFor="let concerto of concertos"
+              [id]="concerto.evento_id"
+              [designacao]="concerto.evento"
+              [data]="concerto.data_hora_inicio"
+              [local]="concerto.palco"
+              [imagem]="concerto.imagem"
+
+  ></app-evento>
 
 
-    <h2 class="tituloPagina">Sobre</h2>
+  <h2 class="tituloPagina">Sobre</h2>
 
-    <h5 class="texto">
-        <p>{{detalhes?.biografia}}</p>
-    </h5>
+  <h5 class="texto">
+    <p>{{detalhes?.biografia}}</p>
+  </h5>
 
 </div>

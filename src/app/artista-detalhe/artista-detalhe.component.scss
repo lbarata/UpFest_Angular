@@ -12,8 +12,8 @@
 
 .thumbArtista {
   display: flex;
-  justify-content: space-around;
-  padding: 50px 18px 0 0;
+  justify-content: center;
+  padding: 50px 25px 0 25px;
   align-items: center;
   margin-bottom: 25px;
   background-position: center;
@@ -32,8 +32,26 @@
 }
 
 .informacoesArtista {
-  padding: 15px 0 15px 25px;
+  padding: 15px 25px 15px 25px;
   display: flex;
   flex-direction: column;
   width: 75%;
+}
+
+
+.favoritoArtista {
+  margin: 45px 25px 0 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #181818;
+  border-radius: 25px;
+  padding: 10px;
+  align-items: center;
+}
+
+.favoritoArtista:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #212121, #494949);
+  transition-duration: 800.1ms;
+  transition-timing-function: cubic-bezier(1, 2, 3, 5);
 }
